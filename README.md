@@ -1,4 +1,4 @@
-# 🧹 Cursor Cleaner & Machine ID Reset Script
+# 🧹 Cursor Trial resetter
 
 A powerful, interactive script for completely removing the Cursor application and its associated configuration data from Debian/Ubuntu systems. This script features a beautiful terminal UI with animations, progress bars, and color-coded output.
 
