@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web3 Task Manager Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Web3 Task Manager</h1>
+      <button id="connectWallet">Connect Wallet</button>
+      <div id="walletStatus">Not connected</div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Create Task</h2>
+        <form id="createTaskForm">
+          <label>
+            Title
+            <input type="text" id="createTitle" required placeholder="Write lesson plan" />
+          </label>
+          <label>
+            Description
+            <textarea id="createDescription" rows="2" placeholder="Detail the smart contract walkthrough"></textarea>
+          </label>
+          <button type="submit">Create</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Assign Task</h2>
+        <form id="assignTaskForm">
+          <label>
+            Task ID
+            <input type="number" id="assignId" min="1" required />
+          </label>
+          <label>
+            Assignee Address
+            <input type="text" id="assignAddress" required placeholder="0x..." />
+          </label>
+          <button type="submit">Assign</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Complete Task</h2>
+        <form id="completeTaskForm">
+          <label>
+            Task ID
+            <input type="number" id="completeId" min="1" required />
+          </label>
+          <button type="submit">Complete</button>
+        </form>
+      </section>
+
+      <section class="panel wide">
+        <h2>Tasks</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Assignee</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tasksBody"></tbody>
+        </table>
+      </section>
+
+      <section class="panel wide">
+        <h2>Event Log</h2>
+        <div id="events"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Local contract: <span id="contractAddress">Not deployed</span></small>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

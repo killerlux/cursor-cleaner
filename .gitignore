@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+cache/
+artifacts/
+typechain-types/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+dist/
+coverage/
+*.tsbuildinfo
+npm-install.log
+*.log

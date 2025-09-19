@@ -1,0 +1,25 @@
+{
+  "name": "web3-task-manager",
+  "version": "1.0.0",
+  "description": "End-to-end Hardhat + Vite demo dApp for managing tasks on-chain.",
+  "license": "MIT",
+  "scripts": {
+    "dev:node": "npx hardhat node",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@types/node": "^20.19.17",
+    "dotenv": "^17.2.2",
+    "hardhat": "^2.26.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "solc": "^0.8.24"
+  }
+}
